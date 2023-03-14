@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>練習1</title>
+    <!--<script src="javascripts/jquery-3.6.1.js"></script>-->
+    <script src="javascripts/jquery-3.6.1.js"></script>
+    <script>
+        /* example 6: 效果相當於dom元素建好，就被呼叫 */
+        $(function () {
+            $("div:eq(2)").mouseover(function (event) {
+                $(event.target).css({
+                    "color": "green",
+                    "font-size": "2cm",
+                    "font-style": "italic",
+                });
+            });
+        })
+        /*  example6 jquery的寫法 callback function*/
+        /* dom元素建好，就被呼叫$(document).ready。 */
+        //$(document).ready(function () {
+        //    /* example 3: 控制div顏色('並聯') 有點error要debug*/
+        //    $("div:eq(2)").mouseover(function (event) {
+        //        $(event.target).css({
+        //            "color": "green",
+        //            "font-size": "2cm",
+        //            "font-style": "italic",
+        //        });
+        //    });
+        //});
+        /*  example6 原本的寫法*/
+        //window.onload = init;
+        //function init() {
+        //     /* example 3: 控制div顏色('並聯') 有點error要debug*/
+        //    $("div:eq(2)").mouseover(function (event) {
+        //        $(event.target).css({
+        //            "color": "green",
+        //            "font-size": "2cm",
+        //            "font-style": "italic",
+        //        });
+        //    });
+        //}
+    </script>
+</head>
+<body onload="init()">
+    <div id="test0">
+        test0
+    </div>
+    <div>
+        test1
+    </div>
+    <div>
+        test2
+    </div>
+</body>
+</html>

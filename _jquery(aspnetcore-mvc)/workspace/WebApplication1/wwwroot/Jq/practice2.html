@@ -6,44 +6,19 @@
     <!--<script src="javascripts/jquery-3.6.1.js"></script>-->
     <script src="javascripts/jquery-3.6.1.js"></script>
     <script>
-        /* example 6: 效果相當於dom元素建好，就被呼叫 */
+        /* example 8: 點擊放大字體 */
         $(function () {
-            $("div:eq(2)").mouseover(function (event) {
-                $(event.target).css({
-                    "color": "green",
-                    "font-size": "2cm",
-                    "font-style": "italic",
+            $("div:first").click(function () {
+                $(this).css({
+                    "font-size": "+=2",
                 });
             });
         })
-        /*  example6 jquery的寫法 callback function*/
-        /* dom元素建好，就被呼叫$(document).ready。 */
-        //$(document).ready(function () {
-        //    /* example 3: 控制div顏色('並聯') 有點error要debug*/
-        //    $("div:eq(2)").mouseover(function (event) {
-        //        $(event.target).css({
-        //            "color": "green",
-        //            "font-size": "2cm",
-        //            "font-style": "italic",
-        //        });
-        //    });
-        //});
-        /*  example6 原本的寫法*/
-        //window.onload = init;
-        //function init() {
-        //     /* example 3: 控制div顏色('並聯') 有點error要debug*/
-        //    $("div:eq(2)").mouseover(function (event) {
-        //        $(event.target).css({
-        //            "color": "green",
-        //            "font-size": "2cm",
-        //            "font-style": "italic",
-        //        });
-        //    });
-        //}
+   
     </script>
 </head>
-<body onload="init()">
-    <div id="test0">
+<body>
+    <div>
         test0
     </div>
     <div>
