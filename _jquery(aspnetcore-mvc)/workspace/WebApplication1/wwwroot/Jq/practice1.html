@@ -11,16 +11,35 @@
             //var divs = document.getelementsbyid("test0");
             //divs.style.color = "red";
             //$("div:eq(1)").css("color", "blue");
-            /* example 2: 控制div顏色 */
-            $("div:eq(1)").mouseover(function (event) {
-                $(event.target).css("color", "green").css("font-size", "2cm");
+            
+            /* example 2: 控制div顏色('串聯') */
+            //$("div:eq(1)").mouseover(function (event) {
+            //    $(event.target).css("color", "green").css("font-size", "2cm");
+            //});
+            
+            /* example 3: 控制div顏色('並聯') 有點error要debug*/
+            $("div:eq(2)").mouseover(function (event) {
+                $(event.target).css({
+                    "color": "green",
+                    "font-size": "2cm",
+                    "font-style": "italic",
+                });
             });
-            $("div:eq(1)").mouseout(function (event) {
-                $(event.target).css("color", "black").css("font-size", "1cm");
-            });
+            /* example 4: 控制div顏色(稱駝峰式) 有點error要debug*/
+            //$("div:eq(1)").mouseout(function (event) {
+            //    $(event.target).css({
+            //        color: "black",
+            //        fontSize: "2cm",
+            //        fontStyle: "italic",
+            //    });
+
+            /* example 5: 用this */
+            //$("div:eq(1)").mouseover(function (event) {
+            //    $(this).css("color", "green").css("font-size", "2cm");
+            //});
         }
     </script>
-</head>W
+</head>
 <body onload="init()">
     <div id="test0">
         test0
