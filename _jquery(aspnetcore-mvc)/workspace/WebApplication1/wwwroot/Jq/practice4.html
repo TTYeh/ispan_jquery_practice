@@ -3,33 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <!--<link href="stylesheets/jquery-ui/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="javascripts/jquery-3.6.1.min.js"></script>
+    <script src="javascripts/jquery-3.6.1.js"></script>-->
+
     <link href="stylesheets/jquery-ui/base/jquery-ui.min.css" rel="stylesheet" />
     <script src="javascripts/jquery-3.6.1.min.js"></script>
-    <script src="javascripts/jquery-3.6.1.js"></script>
-    <script>
-        $(function () {
-            $("#tabs").tabs();
-        })
-        
+    <script src="javascripts/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript">
+            $(function () {
+                $("#tabs").tabs();
+            })
     </script>
 
 </head>
 <body>
     <div id="tabs">
         <ul>
-            <li><a href="#p1"></a></li>
-            <li><a href="#p2"></a></li>
-            <li><a href="#p3"></a></li>
+            <li><a href="#p1">page1</a></li>
+            <li><a href="#p2">page1</a></li>
+            <li><a href="#p3">page1</a></li>
         </ul>
+        <div id="p1">
+            Page-1
+        </div>
+        <div id="p2">
+            Page-2
+        </div>
+        <div id="p3">
+            Page-3
+        </div>
     </div>
-    <div id="p1">
-        Page-1
-    </div>
-    <div id="p2">
-        Page-2
-    </div>
-    <div id="p3">
-        Page-3
-    </div>
+
 </body>
 </html>
