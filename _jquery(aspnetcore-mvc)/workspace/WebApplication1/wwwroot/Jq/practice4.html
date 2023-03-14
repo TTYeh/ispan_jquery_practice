@@ -14,6 +14,9 @@
     <script type="text/javascript">
             $(function () {
                 $("#tabs").tabs();
+
+                // example-10 : 選取第一個tab頁面的第2.3個div
+                $("#tabs div:gt(0)").css({ color: "red"})
             })
     </script>
 
