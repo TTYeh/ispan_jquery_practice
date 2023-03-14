@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>練習1</title>
+    <!--<script src="javascripts/jquery-3.6.1.js"></script>-->
+    <script src="javascripts/jquery-3.6.1.js"></script>
+    <script>
+        function init() {
+            /* example 1: 控制div顏色 */
+            //var divs = document.getelementsbyid("test0");
+            //divs.style.color = "red";
+            //$("div:eq(1)").css("color", "blue");
+            /* example 2: 控制div顏色 */
+            $("div:eq(1)").mouseover(function (event) {
+                $(event.target).css("color", "green").css("font-size", "2cm");
+            });
+            $("div:eq(1)").mouseout(function (event) {
+                $(event.target).css("color", "black").css("font-size", "1cm");
+            });
+        }
+    </script>
+</head>W
+<body onload="init()">
+    <div id="test0">
+        test0
+    </div>
+    <div>
+        test1
+    </div>
+    <div>
+        test2
+    </div>
+</body>
+</html>
