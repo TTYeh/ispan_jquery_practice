@@ -15,8 +15,12 @@
             $(function () {
                 $("#tabs").tabs();
 
-                // example-10 : 選取第一個tab頁面的第2.3個div
-                $("#tabs div:gt(0)").css({ color: "red"})
+                // example-10 : 選擇器1 選取tab頁面div的第2.3個
+                $("#tabs div:gt(0)").css({ color: "red" })
+
+                // example-11 選擇器2 table樣式
+                //$("#p1 table tr:even").css({ backgroundColor: "pink" })
+                $("#p1 table tr:has(td):even").css({ backgroundColor: "pink" })
             })
     </script>
 
@@ -25,11 +29,16 @@
     <div id="tabs">
         <ul>
             <li><a href="#p1">page1</a></li>
-            <li><a href="#p2">page1</a></li>
-            <li><a href="#p3">page1</a></li>
+            <li><a href="#p2">page2</a></li>
+            <li><a href="#p3">page3</a></li>
         </ul>
         <div id="p1">
-            Page-1
+            <table>
+                <tr><th>員工編號</th><th>姓名</th></tr>
+                <tr><td>1</td><td>keven</td></tr>
+                <tr><td>2</td><td>eason</td></tr>
+                <tr><td>3</td><td>wendy</td></tr>
+            </table>
         </div>
         <div id="p2">
             Page-2
